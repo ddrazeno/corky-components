@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers js:babel-core/register --require ./test/setup.js \"test/**/*.@(js)\"",
+    "start": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,21 @@
   "homepage": "https://github.com/DavidAbram/corky-components#readme",
   "dependencies": {
     "corky": "0.0.3"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "gulp": "3.9.1",
+    "gulp-rename": "1.2.2",
+    "gulp-typescript": "2.13.6",
+    "gutil": "1.6.4",
+    "jsdom": "9.4.5",
+    "jsesc": "2.2.0",
+    "merge2": "1.0.2",
+    "mocha": "3.0.2",
+    "path": "0.12.7",
+    "riot": "2.6.1",
+    "through2": "2.0.1",
+    "vinyl": "1.2.0",
+    "rimraf": "2.5.4"
   }
 }
