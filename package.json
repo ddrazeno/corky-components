@@ -1,0 +1,22 @@
+{
+  "name": "corky-components",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidAbram/corky-components.git"
+  },
+  "author": "David Abram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidAbram/corky-components/issues"
+  },
+  "homepage": "https://github.com/DavidAbram/corky-components#readme",
+  "dependencies": {
+    "corky": "0.0.3"
+  }
+}
