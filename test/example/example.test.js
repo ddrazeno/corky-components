@@ -8,18 +8,9 @@ import Flux from 'corky/flux'
 
 describe('Example', () => {
 
+    var app;
+
     var changeTitle = new Flux.Action('TITLE_CHANGED');
-
-    var dummyReducer = new Flux.Reducer([
-        {
-            action: changeTitle,
-            reduce: (state, payload) => {
-                state.title = payload;
-            }
-        }
-    ], {title: "Corky"})
-
-    var app = new App(dummyReducer);
 
     class DummyService extends Service {
 
@@ -33,21 +24,35 @@ describe('Example', () => {
         }
     }
 
-    var tags = {a: tag};
+    beforeEach(() => {
 
-    registerElement(Example, 'a', tags)
-    registerService(Example, new DummyService())
+        var dummyReducer = new Flux.Reducer([
+            {
+                action: changeTitle,
+                reduce: (state, payload) => {
+                    state.title = payload;
+                }
+            }
+        ], { title: "Corky" })
 
-    app.init("#app", Example);
+        app = new App(dummyReducer);
 
-    it('Renders', () => {
-        assert(document.getElementById('app').innerHTML, "<div> Corky </div>");
-        console.log(document.getElementById('app').innerHTML)
+        var tags = { a: tag };
+
+        registerElement(Example, 'a', tags)
+        registerService(Example, new DummyService())
+
+        app.init("#app", Example);
     });
 
-    it('Changes', () => {
-        app.dispatch(changeTitle.payload('Shamoo'))
-        assert(document.getElementById('app').innerHTML, "<div> Shamoo </div>");
-    });
+        it('Renders', () => {
+            assert(document.getElementById('app').innerHTML, "<div> Corky </div>");
+            console.log(document.getElementById('app').innerHTML)
+        });
 
-});
+        it('Changes', () => {
+            app.dispatch(changeTitle.payload('Shamoo'))
+            assert(document.getElementById('app').innerHTML, "<div> Shamoo </div>");
+        });
+
+    });
