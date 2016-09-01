@@ -47,7 +47,6 @@ describe('Example', () => {
 
         it('Renders', () => {
             assert(document.getElementById('app').innerHTML, "<div> Corky </div>");
-            console.log(document.getElementById('app').innerHTML)
         });
 
         it('Changes', () => {
