@@ -1,3 +1,5 @@
+import { Element } from 'corky/tags/Element';
+
 export interface IButton{
     text: string;
     icons: {pre: string};
