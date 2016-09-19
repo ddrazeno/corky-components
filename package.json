@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --require ./test/setup.js \"test/**/*.@(js)\"",
     "start": "gulp build",
-    "htmltest": "gulp prepare-html-tests & http-server ./test -o"
+    "htmltest": "npm start & gulp prepare-html-tests & http-server ./test -o"
   },
   "babel": {
     "presets": [
