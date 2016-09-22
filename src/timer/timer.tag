@@ -1,3 +1,3 @@
 <timer>
-    <p>Seconds Elapsed: { time }</p>
+    <p><span>Seconds Elapsed:</span> { time }</p>
 </timer>
