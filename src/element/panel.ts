@@ -13,5 +13,11 @@ export abstract class Panel extends Element implements IPanel{
     text: string;
     direction: "left" | "right";
     collapsed: boolean;
-    toogle: () => void;
+
+
+    toogle: () => {
+
+    };
+
+    
 }

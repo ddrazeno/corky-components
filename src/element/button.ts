@@ -13,5 +13,9 @@ export abstract class Button extends Element implements IButton{
     icons: {pre: string};
     disabled: boolean;
     hidden: boolean;
-    onclick:(event: MouseEvent ) => void;
+
+    onclick:(event: MouseEvent ) => {
+        
+    }
+
 }

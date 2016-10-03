@@ -14,4 +14,6 @@ export abstract class Link extends Element implements ILink{
     disabled: boolean;
     hidden: boolean;
     href: string;
+
+    
 }
